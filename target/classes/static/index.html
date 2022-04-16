@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dow Jones Index Dataset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+
+			Testing the CRUD endpoints <br>
+
+			=========================================  <br>
+
+			1) Getting a Index by ticker  <br>
+
+			Make a GET request to http://localhost:8080/api/dj/indexes?stock=AA
+			specifying the ticker at the end of the URL, e.g. AA  <br>  <br>
+
+			2) Upload Dow Jones Dataset file  <br>
+
+			Make a POST request to http://localhost:8080/api/dj/indexes/upload
+			specifying key as indexFile and value as file location
+			(under body  > form data)  <br>  <br>
+
+			3) To add new Index  <br>
+
+			Make a POST request with the JSON body as shown below to
+			POST http://localhost:8080/api/dj/index  <br>
+
+			{
+			"quarter": "1",
+			"stock": "BB",
+			"date": "1/7/2011",
+			"open": "$15.82",
+			"high": "$16.72",
+			"low": "$15.78",
+			"close": "$16.42",
+			"volume": 239655616,
+			"percent_change_price": "3.79267",
+			"percent_change_volume_over_last_wk": "",
+			"previous_weeks_volume": 0,
+			"next_weeks_open": "$16.71",
+			"next_weeks_close": "$15.97",
+			"percent_change_next_weeks_price": "-4.42849",
+			"days_to_next_dividend": 26,
+			"percent_return_next_dividend": "0.182704"
+			}
+		</div>
+	</div>
+</body>
+</html>
